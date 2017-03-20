@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <!--    Reservation Page-->
+    <servlet>
+        <servlet-name>reserveTable</servlet-name>
+        <servlet-class>servlets.reserveTable</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>reserveTable</servlet-name>
+        <url-pattern>/reserve-a-table</url-pattern>
+    </servlet-mapping>
+    <!--    Menu Page-->
+    <servlet>
+        <servlet-name>menu</servlet-name>
+        <servlet-class>servlets.menu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
+    </servlet-mapping>
+    <!--    Menu Page-->
+    <servlet>
+        <servlet-name>search</servlet-name>
+        <servlet-class>servlets.search</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>search</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Cart page -->
+    
+    <servlet>
+        <servlet-name>cart</servlet-name>
+        <servlet-class>servlets.cart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cart</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- News page -->
+    
+    <servlet>
+        <servlet-name>news</servlet-name>
+        <servlet-class>servlets.news</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>news</servlet-name>
+        <url-pattern>/News</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Upload Image -->
+    
+    <servlet>
+        <servlet-name>Upload</servlet-name>
+        <servlet-class>servlets.uploadImage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Upload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Add Post -->
+    
+    <servlet>
+        <servlet-name>AppPost</servlet-name>
+        <servlet-class>servlets.AddPost</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AppPost</servlet-name>
+        <url-pattern>/publishPost</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- About Page -->
+    
+    <servlet>
+        <servlet-name>About</servlet-name>
+        <servlet-class>servlets.About</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>About</servlet-name>
+        <url-pattern>/About</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <!-- CPanel Page -->
+    
+    <servlet>
+        <servlet-name>CPanel</servlet-name>
+        <servlet-class>servlets.Cpanel</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>CPanel</servlet-name>
+        <url-pattern>/cpanel</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- Add Meal -->
+    
+    <servlet>
+        <servlet-name>AddMeal</servlet-name>
+        <servlet-class>servlets.AddMeal</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AddMeal</servlet-name>
+        <url-pattern>/addMeal</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
