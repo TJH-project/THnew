@@ -5,6 +5,18 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <!--    Home Page-->
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>servlets.home</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+    
+    
     <!--    Reservation Page-->
     <servlet>
         <servlet-name>reserveTable</servlet-name>

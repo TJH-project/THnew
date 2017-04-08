@@ -2,14 +2,11 @@
 
 <%  
     // initializing database connection
-    
-  String dbUrl = "jdbc:mysql://localhost:3306/servlet";
-	String dbUser = "root";
-	String dbPass = "";
+   
 	
 	Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-	Connection c = DriverManager.getConnection(dbUrl, dbUser, dbPass);
+	Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/taj", "root", "PasswordForRoot");
 
 	Statement st = c.createStatement();
         
@@ -32,16 +29,18 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
-    rs.close();
+    
     c.close();
     out.print(res);
     }
@@ -61,16 +60,18 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
-    rs.close();
+    
     c.close();
     out.print(res);
     }
@@ -91,13 +92,15 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
     rs.close();
@@ -121,13 +124,15 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
     rs.close();
@@ -151,13 +156,15 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">" 
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
     rs.close();
@@ -181,13 +188,15 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
     rs.close();
@@ -211,13 +220,15 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
     rs.close();
@@ -241,13 +252,15 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
     rs.close();
@@ -270,13 +283,15 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"  
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
     rs.close();
@@ -299,16 +314,18 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
-    rs.close();
+    
     c.close();
     out.print(res);
     }
@@ -328,16 +345,18 @@ if (chk != null) {
                     String category = rs.getString("p_category");
                     String image = rs.getString("p_image");
                     float price = rs.getFloat("p_price");
-                    res+="<div class=\"item col s12 m6 l4 card\" style=\"height: 400px; width: 30%; margin: 15px\">"
+                    res+="<div class=\"item col s12 m6 l3\" style=\"height: auto\">"
+                            + "<div class=\"card\">"
                             + "<div class=\"card-image\" >"
                             + "<img src=" + image + "><a data-cat=\"" + category + "\" data-id=\"" + id + "\" class=\"add-to-cart btn-floating halfway-fab waves-effect waves-light red\">"
                             + "<i class=\"material-icons\">add</i></a></div><div class=\"card-content\">"
-                            + "<span class=\"card-title\">" +name + "</span><p>" + description + "</p>"
-                            + "</div>"
-                            + "</div>";
+                            + "<p class=\"card-title\">" + name + "</p><div class=\"row\">"
+                            + "<div class=\"col l12\"><p style=\"text-align:justify\">" + description + "</p></div>"
+                            + "<div class=\"col l12 right\"><span class=\"red-text right price\">RM " + price + "</div>"
+                            + "</div></div></div></div>";
             
             }
-    rs.close();
+    
     c.close();
     out.print(res);
     }
@@ -395,11 +414,18 @@ if (chk != null) {
     String price = rs.getString("item_price");
     String count = rs.getString("item_count");
     
-    res+=("<li class=\"collection-item gray lighten-3\"><div class=\"row\"><div class=\"col m4\"><img class=\"left circle z-depth-3\" src=\"" + image + "\" style=\"width: 100px; margin-right: 30px\"></div><div class=\"col m6\"><p style=\"font-family: GillSans\" class=\"title light\">" + name + "</p></div><br><div class=\"col m2 right\"><a data-id=\"" + id + "\" style=\"margin-right:35px; margin-left:0\" class=\"btn-flat del\" href=\"#\"><span class=\"ion-trash-a circle\"></span></a></div><br><br><div class=\"col m6\"><h6>RM " + price + " <span class=\"red-text\">x" + count + "</span></h6></div></div></li>");
+    res+=("<div class=\"collection-item gray lighten-3\"><div class=\"row\"><div class=\"col m4\"><img class=\"left circle z-depth-3\" "
+            + "src=\"" + image + "\" style=\"width: 100px; margin-right: 30px\"></div><div class=\"col m6\"><p style=\"font-family: GillSans\" "
+            + "class=\"title light black-text\">" + name + "</p></div><br><div class=\"col m2 right\"><a data-id=\"" + id + "\" style=\"margin-right:35px; "
+            + "margin-left:0\" class=\"btn-flat del\" href=\"#\"><span class=\"ion-trash-a circle\"></span></a></div><br><br><div class=\"col m6\">"
+            + "<h6>RM " + price + " <span class=\"red-text\">x" + count + "</span></h6></div></div></div>");
     }
     ResultSet sum = st.executeQuery("select sum(item_total) from cart where customer_id = '" + request.getRemoteHost() + "'");
     if(sum.next()) {
-       out.print(res + "<div class=\"divider\"></div><div style=\"margin-left:15px\" class=\"left black-text\">Subtotal: RM <span style=\"font-weight:800\" class=\"red-text\">" + sum.getString(1) + "</span></div><a href=\"#\" class=\"right btn waves-effect red darken-4\" style=\"margin-top:15px; padding-bottom:35px\" type=\"submit\" name=\"action\">Checkout<i class=\"material-icons right\">send</i></a>"); 
+       out.print(res + "<div class=\"divider\"></div><div style=\"margin-left:15px\" class=\"left black-text\">Subtotal: "
+               + "RM <span style=\"font-weight:800\" class=\"red-text\">" + sum.getString(1) + "</span></div><a href=\"#checkout\" "
+                       + "class=\"checkout-modal right btn waves-effect red darken-4\" style=\"margin-top:15px; padding-bottom:35px\" type=\"submit\" "
+                       + "name=\"action\">Checkout<i class=\"material-icons right\">send</i></a>"); 
     }
     
     
@@ -407,7 +433,8 @@ if (chk != null) {
     c.close();
 }
 
-
+ // Delete from cart
+ 
 chk = request.getParameter("del");
 
 if (chk != null) {
@@ -415,6 +442,30 @@ if (chk != null) {
     
     st.executeUpdate("delete from cart where customer_id = '" + request.getRemoteHost() + "' and item_id = " + id);
     c.close();
+}
+
+// retreive table of items in checkout
+
+chk = request.getParameter("items_table");
+
+if (chk != null) {
+        
+        ResultSet rs = st.executeQuery("select item_name, item_price, item_count, sum(item_total) from cart where customer_id = '" + request.getRemoteHost() + "'");
+        String res = "";
+        while (rs.next()) {
+            String name = rs.getString("item_name");
+            float price = rs.getFloat("item_price");
+            int count = rs.getInt("item_count");
+            float total = rs.getInt("item_total");
+            
+            res += "<tr>"
+            +"<td>" + name + "</td>"
+            +"<td>" + count + "</td>"
+            +"<td>" + price + "</td>"
+            +"</tr>";
+        }
+        out.print(res);
+        c.close();
 }
 
 

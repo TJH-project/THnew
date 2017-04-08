@@ -2,14 +2,23 @@
 
 
 <script>
-    changeBackground();
-    function changeBackground() {
-   document.body.style.background = "#555";
-   document.body.style.overflow = "hidden";
-}
+   document.body.style.background = "#33691E";
+   document.title = 'About us';
+   
+   $(nav).removeClass('z-depth-0');
+   $(nav).addClass('z-depth-3');
+
 </script>
-<div class="about right">
-<div class="about-container right">  
+
+
+
+<iframe class="full-wid" width="70%" height="45%" style="float: left; margin-top: 6%"
+        frameborder="0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDJEuzNFpKHjQQh95oefOhu6nROQ7yzrx4
+    &q=Restaurant+Taj+Hadramawt+@+Melati+Utama">
+</iframe>
+	
+    <div class="about-container left" style="width: 30%; margin: 25px">  
   <form id="contact" action="About" method="post">
     <h3>Write to us..</h3>
     <h4>You may suggest improvements for our website</h4>
@@ -26,24 +35,19 @@
         <textarea placeholder="Type your message here...." name="message" tabindex="5" required></textarea>
     </fieldset>
     <fieldset>
-       <button class="btn waves-effect waves-ripple red darken-4 right" type="submit" name="action">Submit
+       <button class="btn waves-effect waves-ripple green darken-3 right" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
   </button>
     </fieldset>
     ${sent}
   </form>
+   </div>
+
+
     
-</div>
   	
-  <div class="left" style="width: 70%; height: auto">	
-    <iframe  class="map"
-  frameborder="0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDJEuzNFpKHjQQh95oefOhu6nROQ7yzrx4
-    &q=Restaurant+Taj+Hadramawt+@+Melati+Utama">
-</iframe>
-	</div>
   
-  p.lorem
-</div>
+  
+
         
 <%@include file = "footer.jsp" %>

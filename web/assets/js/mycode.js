@@ -296,6 +296,21 @@ $('.container').on('click', '.add-to-cart', function () {
             });
 });
 
+
+//load items in checkout
+
+
+    $.ajax({
+        url: 'requests.jsp',
+        data:{items_table: 1},
+        success: function(data) {
+            $('.items-table').html(data);
+            
+        }
+    
+            });
+
+
 // remove from cart menu
 
     $('#cartMenu').on('click', '.del', function () {
@@ -308,7 +323,7 @@ $('.container').on('click', '.add-to-cart', function () {
             cartMenu();
         }
         });
-    $(this).closest('li').remove();
+    $(this).closest('div').remove();
 });
 
 
@@ -323,4 +338,19 @@ $('.container').on('click', '.add-to-cart', function () {
             
          
          
-         
+       $('#checkout').modal('open');
+       
+       //Pickup or delivery
+       
+       $('#pickup').click(function () {
+            $('.address').css('display', 'none');
+});
+       $('#delivery').click(function () {
+            $('.address').css('display', 'block');
+});
+
+
+$('.jump').click(function () {
+    $(document).scrollTop($('#menu-tabs').offset().top);
+});
+

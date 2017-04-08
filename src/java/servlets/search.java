@@ -24,7 +24,7 @@ public class search extends HttpServlet {
         try { 
             Class.forName("com.mysql.jdbc.Driver");
             
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet", "root", "");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/taj", "root", "PasswordForRoot");
 
             st = c.createStatement();
             

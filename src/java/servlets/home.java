@@ -25,6 +25,12 @@ public class home extends HttpServlet {
         
         HttpSession session=request.getSession();  
         session.setAttribute("customer",n);
+        
+        if(request.getHeader("User-Agent").indexOf("Mobile") != -1) {
+    request.getRequestDispatcher("/m").forward(request, response);
+  } else {
+    request.getRequestDispatcher("/index.jsp").forward(request,response);
+  }
             
     }
 
